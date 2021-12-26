@@ -22,5 +22,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/employeelist', function (){
-    return "Hellow Employee 12345";
+    return "Hellow Employee 12345 78b78
+    test 2";
 });
