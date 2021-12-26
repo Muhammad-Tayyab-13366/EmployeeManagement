@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Employee;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/employeelist', function (){
-    return "Hellow Employee 12345 78b78
-    test 2";
-});
+Route::get('/', [Employee::class, 'index'])->name('employeelist');
